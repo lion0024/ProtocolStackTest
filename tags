@@ -1,0 +1,517 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ARP_TABLE	MyEth-1/arp.c	/^}ARP_TABLE;$/;"	t	typeref:struct:__anon3	file:
+ARP_TABLE	MyEth-2/arp.c	/^}ARP_TABLE;$/;"	t	typeref:struct:__anon8	file:
+ARP_TABLE	MyEth-3/arp.c	/^}ARP_TABLE;$/;"	t	typeref:struct:__anon17	file:
+ARP_TABLE_NO	MyEth-1/arp.c	17;"	d	file:
+ARP_TABLE_NO	MyEth-2/arp.c	17;"	d	file:
+ARP_TABLE_NO	MyEth-3/arp.c	17;"	d	file:
+AllZeroMac	MyEth-1/ether.c	/^u_int8_t	AllZeroMac[6]={0,0,0,0,0,0};$/;"	v
+AllZeroMac	MyEth-2/ether.c	/^u_int8_t	AllZeroMac[6]={0,0,0,0,0,0};$/;"	v
+AllZeroMac	MyEth-3/ether.c	/^u_int8_t	AllZeroMac[6]={0,0,0,0,0,0};$/;"	v
+ArpAddTable	MyEth-1/arp.c	/^int ArpAddTable(u_int8_t mac[6],struct in_addr *ipaddr)$/;"	f
+ArpAddTable	MyEth-2/arp.c	/^int ArpAddTable(u_int8_t mac[6],struct in_addr *ipaddr)$/;"	f
+ArpAddTable	MyEth-3/arp.c	/^int ArpAddTable(u_int8_t mac[6],struct in_addr *ipaddr)$/;"	f
+ArpCheckGArp	MyEth-1/arp.c	/^int ArpCheckGArp(int soc)$/;"	f
+ArpCheckGArp	MyEth-2/arp.c	/^int ArpCheckGArp(int soc)$/;"	f
+ArpCheckGArp	MyEth-3/arp.c	/^int ArpCheckGArp(int soc)$/;"	f
+ArpDelTable	MyEth-1/arp.c	/^int ArpDelTable(struct in_addr *ipaddr)$/;"	f
+ArpDelTable	MyEth-2/arp.c	/^int ArpDelTable(struct in_addr *ipaddr)$/;"	f
+ArpDelTable	MyEth-3/arp.c	/^int ArpDelTable(struct in_addr *ipaddr)$/;"	f
+ArpRecv	MyEth-1/arp.c	/^int ArpRecv(int soc,struct ether_header *eh,u_int8_t *data,int len)$/;"	f
+ArpRecv	MyEth-2/arp.c	/^int ArpRecv(int soc,struct ether_header *eh,u_int8_t *data,int len)$/;"	f
+ArpRecv	MyEth-3/arp.c	/^int ArpRecv(int soc,struct ether_header *eh,u_int8_t *data,int len)$/;"	f
+ArpSearchTable	MyEth-1/arp.c	/^int ArpSearchTable(struct in_addr *ipaddr,u_int8_t mac[6])$/;"	f
+ArpSearchTable	MyEth-2/arp.c	/^int ArpSearchTable(struct in_addr *ipaddr,u_int8_t mac[6])$/;"	f
+ArpSearchTable	MyEth-3/arp.c	/^int ArpSearchTable(struct in_addr *ipaddr,u_int8_t mac[6])$/;"	f
+ArpSend	MyEth-1/arp.c	/^int ArpSend(int soc,u_int16_t op,$/;"	f
+ArpSend	MyEth-2/arp.c	/^int ArpSend(int soc,u_int16_t op,$/;"	f
+ArpSend	MyEth-3/arp.c	/^int ArpSend(int soc,u_int16_t op,$/;"	f
+ArpSendRequest	MyEth-1/arp.c	/^int ArpSendRequest(int soc,struct in_addr *targetIp)$/;"	f
+ArpSendRequest	MyEth-2/arp.c	/^int ArpSendRequest(int soc,struct in_addr *targetIp)$/;"	f
+ArpSendRequest	MyEth-3/arp.c	/^int ArpSendRequest(int soc,struct in_addr *targetIp)$/;"	f
+ArpSendRequestGratuitous	MyEth-1/arp.c	/^int ArpSendRequestGratuitous(int soc,struct in_addr *targetIp)$/;"	f
+ArpSendRequestGratuitous	MyEth-2/arp.c	/^int ArpSendRequestGratuitous(int soc,struct in_addr *targetIp)$/;"	f
+ArpSendRequestGratuitous	MyEth-3/arp.c	/^int ArpSendRequestGratuitous(int soc,struct in_addr *targetIp)$/;"	f
+ArpShowTable	MyEth-1/arp.c	/^int ArpShowTable()$/;"	f
+ArpShowTable	MyEth-2/arp.c	/^int ArpShowTable()$/;"	f
+ArpShowTable	MyEth-3/arp.c	/^int ArpShowTable()$/;"	f
+ArpTable	MyEth-1/arp.c	/^ARP_TABLE	ArpTable[ARP_TABLE_NO];$/;"	v
+ArpTable	MyEth-2/arp.c	/^ARP_TABLE	ArpTable[ARP_TABLE_NO];$/;"	v
+ArpTable	MyEth-3/arp.c	/^ARP_TABLE	ArpTable[ARP_TABLE_NO];$/;"	v
+ArpTableLock	MyEth-1/arp.c	/^pthread_rwlock_t	ArpTableLock=PTHREAD_RWLOCK_INITIALIZER;$/;"	v
+ArpTableLock	MyEth-2/arp.c	/^pthread_rwlock_t	ArpTableLock=PTHREAD_RWLOCK_INITIALIZER;$/;"	v
+ArpTableLock	MyEth-3/arp.c	/^pthread_rwlock_t	ArpTableLock=PTHREAD_RWLOCK_INITIALIZER;$/;"	v
+BOOTREPLY	MyEth-2/dhcp.h	35;"	d
+BOOTREPLY	MyEth-3/dhcp.h	35;"	d
+BOOTREQUEST	MyEth-2/dhcp.h	34;"	d
+BOOTREQUEST	MyEth-3/dhcp.h	34;"	d
+BcastMac	MyEth-1/ether.c	/^u_int8_t	BcastMac[6]={0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};$/;"	v
+BcastMac	MyEth-2/ether.c	/^u_int8_t	BcastMac[6]={0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};$/;"	v
+BcastMac	MyEth-3/ether.c	/^u_int8_t	BcastMac[6]={0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};$/;"	v
+CFLAGS	MyEth-1/Makefile	/^CFLAGS=-Wall -g$/;"	m
+CFLAGS	MyEth-2/Makefile	/^CFLAGS=-Wall -g$/;"	m
+CFLAGS	MyEth-3/Makefile	/^CFLAGS=-Wall -g$/;"	m
+DEFAULT_IP_TTL	MyEth-1/param.h	2;"	d
+DEFAULT_IP_TTL	MyEth-2/param.h	2;"	d
+DEFAULT_IP_TTL	MyEth-3/param.h	2;"	d
+DEFAULT_MSS	MyEth-3/param.h	3;"	d
+DEFAULT_MTU	MyEth-1/param.h	1;"	d
+DEFAULT_MTU	MyEth-2/param.h	1;"	d
+DEFAULT_MTU	MyEth-3/param.h	1;"	d
+DEFAULT_PING_SIZE	MyEth-1/param.h	3;"	d
+DEFAULT_PING_SIZE	MyEth-2/param.h	3;"	d
+DEFAULT_PING_SIZE	MyEth-3/param.h	4;"	d
+DHCPACK	MyEth-2/dhcp.h	47;"	d
+DHCPACK	MyEth-3/dhcp.h	47;"	d
+DHCPDECLINE	MyEth-2/dhcp.h	46;"	d
+DHCPDECLINE	MyEth-3/dhcp.h	46;"	d
+DHCPDISCOVER	MyEth-2/dhcp.h	43;"	d
+DHCPDISCOVER	MyEth-3/dhcp.h	43;"	d
+DHCPINFORM	MyEth-2/dhcp.h	50;"	d
+DHCPINFORM	MyEth-3/dhcp.h	50;"	d
+DHCPNAK	MyEth-2/dhcp.h	48;"	d
+DHCPNAK	MyEth-3/dhcp.h	48;"	d
+DHCPOFFER	MyEth-2/dhcp.h	44;"	d
+DHCPOFFER	MyEth-3/dhcp.h	44;"	d
+DHCPRELEASE	MyEth-2/dhcp.h	49;"	d
+DHCPRELEASE	MyEth-3/dhcp.h	49;"	d
+DHCPREQUEST	MyEth-2/dhcp.h	45;"	d
+DHCPREQUEST	MyEth-3/dhcp.h	45;"	d
+DHCP_CLIENT_PORT	MyEth-2/dhcp.h	2;"	d
+DHCP_CLIENT_PORT	MyEth-3/dhcp.h	2;"	d
+DHCP_FILE_LEN	MyEth-2/dhcp.h	8;"	d
+DHCP_FILE_LEN	MyEth-3/dhcp.h	8;"	d
+DHCP_FIXED_LEN	MyEth-2/dhcp.h	10;"	d
+DHCP_FIXED_LEN	MyEth-3/dhcp.h	10;"	d
+DHCP_FIXED_NON_UDP	MyEth-2/dhcp.h	9;"	d
+DHCP_FIXED_NON_UDP	MyEth-3/dhcp.h	9;"	d
+DHCP_MTU_MAX	MyEth-2/dhcp.h	11;"	d
+DHCP_MTU_MAX	MyEth-3/dhcp.h	11;"	d
+DHCP_OPTIONS_COOKIE	MyEth-2/dhcp.h	41;"	d
+DHCP_OPTIONS_COOKIE	MyEth-3/dhcp.h	41;"	d
+DHCP_OPTION_LEN	MyEth-2/dhcp.h	12;"	d
+DHCP_OPTION_LEN	MyEth-3/dhcp.h	12;"	d
+DHCP_SERVER_PORT	MyEth-2/dhcp.h	1;"	d
+DHCP_SERVER_PORT	MyEth-3/dhcp.h	1;"	d
+DHCP_SNAME_LEN	MyEth-2/dhcp.h	7;"	d
+DHCP_SNAME_LEN	MyEth-3/dhcp.h	7;"	d
+DHCP_UDP_OVERHEAD	MyEth-2/dhcp.h	4;"	d
+DHCP_UDP_OVERHEAD	MyEth-3/dhcp.h	4;"	d
+DUMMY_WAIT_MS	MyEth-1/param.h	5;"	d
+DUMMY_WAIT_MS	MyEth-2/param.h	5;"	d
+DUMMY_WAIT_MS	MyEth-3/param.h	6;"	d
+DeviceSoc	MyEth-1/main.c	/^int	DeviceSoc;$/;"	v
+DeviceSoc	MyEth-2/main.c	/^int	DeviceSoc;$/;"	v
+DeviceSoc	MyEth-3/main.c	/^int	DeviceSoc;$/;"	v
+DhcpCheck	MyEth-2/dhcp.c	/^int DhcpCheck(int soc)$/;"	f
+DhcpCheck	MyEth-3/dhcp.c	/^int DhcpCheck(int soc)$/;"	f
+DhcpLeaseTime	MyEth-2/param.h	/^	u_int32_t	DhcpLeaseTime;$/;"	m	struct:__anon10
+DhcpLeaseTime	MyEth-3/param.h	/^	u_int32_t	DhcpLeaseTime;$/;"	m	struct:__anon19
+DhcpRecv	MyEth-2/dhcp.c	/^int DhcpRecv(int soc,u_int8_t *data,int len,struct ether_header *eh,struct ip *ip,struct udphdr *udp)$/;"	f
+DhcpRecv	MyEth-3/dhcp.c	/^int DhcpRecv(int soc,u_int8_t *data,int len,struct ether_header *eh,struct ip *ip,struct udphdr *udp)$/;"	f
+DhcpRequestLeaseTime	MyEth-2/param.h	/^	u_int32_t	DhcpRequestLeaseTime;$/;"	m	struct:__anon10
+DhcpRequestLeaseTime	MyEth-3/param.h	/^	u_int32_t	DhcpRequestLeaseTime;$/;"	m	struct:__anon19
+DhcpSendDiscover	MyEth-2/dhcp.c	/^int DhcpSendDiscover(int soc)$/;"	f
+DhcpSendDiscover	MyEth-3/dhcp.c	/^int DhcpSendDiscover(int soc)$/;"	f
+DhcpSendRelease	MyEth-2/dhcp.c	/^int DhcpSendRelease(int soc)$/;"	f
+DhcpSendRelease	MyEth-3/dhcp.c	/^int DhcpSendRelease(int soc)$/;"	f
+DhcpSendRequest	MyEth-2/dhcp.c	/^int DhcpSendRequest(int soc,struct in_addr *yiaddr,struct in_addr *server)$/;"	f
+DhcpSendRequest	MyEth-3/dhcp.c	/^int DhcpSendRequest(int soc,struct in_addr *yiaddr,struct in_addr *server)$/;"	f
+DhcpSendRequestUni	MyEth-2/dhcp.c	/^int DhcpSendRequestUni(int soc)$/;"	f
+DhcpSendRequestUni	MyEth-3/dhcp.c	/^int DhcpSendRequestUni(int soc)$/;"	f
+DhcpServer	MyEth-2/param.h	/^	struct in_addr	DhcpServer;$/;"	m	struct:__anon10	typeref:struct:__anon10::in_addr
+DhcpServer	MyEth-3/param.h	/^	struct in_addr	DhcpServer;$/;"	m	struct:__anon19	typeref:struct:__anon19::in_addr
+DhcpStartTime	MyEth-2/param.h	/^	time_t		DhcpStartTime;$/;"	m	struct:__anon10
+DhcpStartTime	MyEth-3/param.h	/^	time_t		DhcpStartTime;$/;"	m	struct:__anon19
+DoCmd	MyEth-1/cmd.c	/^int DoCmd(char *cmd)$/;"	f
+DoCmd	MyEth-2/cmd.c	/^int DoCmd(char *cmd)$/;"	f
+DoCmd	MyEth-3/cmd.c	/^int DoCmd(char *cmd)$/;"	f
+DoCmdArp	MyEth-1/cmd.c	/^int DoCmdArp(char **cmdline)$/;"	f
+DoCmdArp	MyEth-2/cmd.c	/^int DoCmdArp(char **cmdline)$/;"	f
+DoCmdArp	MyEth-3/cmd.c	/^int DoCmdArp(char **cmdline)$/;"	f
+DoCmdEnd	MyEth-1/cmd.c	/^int DoCmdEnd(char **cmdline)$/;"	f
+DoCmdEnd	MyEth-2/cmd.c	/^int DoCmdEnd(char **cmdline)$/;"	f
+DoCmdEnd	MyEth-3/cmd.c	/^int DoCmdEnd(char **cmdline)$/;"	f
+DoCmdIfconfig	MyEth-1/cmd.c	/^int DoCmdIfconfig(char **cmdline)$/;"	f
+DoCmdIfconfig	MyEth-2/cmd.c	/^int DoCmdIfconfig(char **cmdline)$/;"	f
+DoCmdIfconfig	MyEth-3/cmd.c	/^int DoCmdIfconfig(char **cmdline)$/;"	f
+DoCmdNetstat	MyEth-2/cmd.c	/^int DoCmdNetstat(char **cmdline)$/;"	f
+DoCmdNetstat	MyEth-3/cmd.c	/^int DoCmdNetstat(char **cmdline)$/;"	f
+DoCmdPing	MyEth-1/cmd.c	/^int DoCmdPing(char **cmdline)$/;"	f
+DoCmdPing	MyEth-2/cmd.c	/^int DoCmdPing(char **cmdline)$/;"	f
+DoCmdPing	MyEth-3/cmd.c	/^int DoCmdPing(char **cmdline)$/;"	f
+DoCmdTcp	MyEth-3/cmd.c	/^int DoCmdTcp(char **cmdline)$/;"	f
+DoCmdUdp	MyEth-2/cmd.c	/^int DoCmdUdp(char **cmdline)$/;"	f
+DoCmdUdp	MyEth-3/cmd.c	/^int DoCmdUdp(char **cmdline)$/;"	f
+DummyWait	MyEth-1/sock.c	/^int DummyWait(int ms)$/;"	f
+DummyWait	MyEth-2/sock.c	/^int DummyWait(int ms)$/;"	f
+DummyWait	MyEth-3/sock.c	/^int DummyWait(int ms)$/;"	f
+ECHO_HDR_SIZE	MyEth-1/icmp.c	18;"	d	file:
+ECHO_HDR_SIZE	MyEth-2/icmp.c	18;"	d	file:
+ECHO_HDR_SIZE	MyEth-3/icmp.c	18;"	d	file:
+EndFlag	MyEth-1/main.c	/^int	EndFlag=0;$/;"	v
+EndFlag	MyEth-2/main.c	/^int	EndFlag=0;$/;"	v
+EndFlag	MyEth-3/main.c	/^int	EndFlag=0;$/;"	v
+EtherRecv	MyEth-1/ether.c	/^int EtherRecv(int soc,u_int8_t *in_ptr,int in_len)$/;"	f
+EtherRecv	MyEth-2/ether.c	/^int EtherRecv(int soc,u_int8_t *in_ptr,int in_len)$/;"	f
+EtherRecv	MyEth-3/ether.c	/^int EtherRecv(int soc,u_int8_t *in_ptr,int in_len)$/;"	f
+EtherSend	MyEth-1/ether.c	/^int EtherSend(int soc,u_int8_t smac[6],u_int8_t dmac[6],u_int16_t type,u_int8_t *data,int len)$/;"	f
+EtherSend	MyEth-2/ether.c	/^int EtherSend(int soc,u_int8_t smac[6],u_int8_t dmac[6],u_int16_t type,u_int8_t *data,int len)$/;"	f
+EtherSend	MyEth-3/ether.c	/^int EtherSend(int soc,u_int8_t smac[6],u_int8_t dmac[6],u_int16_t type,u_int8_t *data,int len)$/;"	f
+GetMacAddress	MyEth-1/sock.c	/^int GetMacAddress(char *device,u_int8_t *hwaddr)$/;"	f
+GetMacAddress	MyEth-2/sock.c	/^int GetMacAddress(char *device,u_int8_t *hwaddr)$/;"	f
+GetMacAddress	MyEth-3/sock.c	/^int GetMacAddress(char *device,u_int8_t *hwaddr)$/;"	f
+GetTargetMac	MyEth-1/arp.c	/^int GetTargetMac(int soc,struct in_addr *daddr,u_int8_t dmac[6],int gratuitous)$/;"	f
+GetTargetMac	MyEth-2/arp.c	/^int GetTargetMac(int soc,struct in_addr *daddr,u_int8_t dmac[6],int gratuitous)$/;"	f
+GetTargetMac	MyEth-3/arp.c	/^int GetTargetMac(int soc,struct in_addr *daddr,u_int8_t dmac[6],int gratuitous)$/;"	f
+HTYPE_ETHER	MyEth-2/dhcp.h	37;"	d
+HTYPE_ETHER	MyEth-3/dhcp.h	37;"	d
+HTYPE_FDDI	MyEth-2/dhcp.h	39;"	d
+HTYPE_FDDI	MyEth-3/dhcp.h	39;"	d
+HTYPE_IEEE802	MyEth-2/dhcp.h	38;"	d
+HTYPE_IEEE802	MyEth-3/dhcp.h	38;"	d
+IP_RECV_BUF	MyEth-1/ip.c	/^}IP_RECV_BUF;$/;"	t	typeref:struct:__anon1	file:
+IP_RECV_BUF	MyEth-2/ip.c	/^}IP_RECV_BUF;$/;"	t	typeref:struct:__anon6	file:
+IP_RECV_BUF	MyEth-3/ip.c	/^}IP_RECV_BUF;$/;"	t	typeref:struct:__anon15	file:
+IP_RECV_BUF_NO	MyEth-1/ip.c	22;"	d	file:
+IP_RECV_BUF_NO	MyEth-2/ip.c	24;"	d	file:
+IP_RECV_BUF_NO	MyEth-3/ip.c	26;"	d	file:
+IcmpRecv	MyEth-1/icmp.c	/^int IcmpRecv(int soc,u_int8_t *raw,int raw_len,struct ether_header *eh,struct ip *ip,u_int8_t *data,int len)$/;"	f
+IcmpRecv	MyEth-2/icmp.c	/^int IcmpRecv(int soc,u_int8_t *raw,int raw_len,struct ether_header *eh,struct ip *ip,u_int8_t *data,int len)$/;"	f
+IcmpRecv	MyEth-3/icmp.c	/^int IcmpRecv(int soc,u_int8_t *raw,int raw_len,struct ether_header *eh,struct ip *ip,u_int8_t *data,int len)$/;"	f
+IcmpSendDestinationUnreachable	MyEth-2/icmp.c	/^int IcmpSendDestinationUnreachable(int soc,struct in_addr *daddr,struct ip *ip,u_int8_t *data,int len)$/;"	f
+IcmpSendDestinationUnreachable	MyEth-3/icmp.c	/^int IcmpSendDestinationUnreachable(int soc,struct in_addr *daddr,struct ip *ip,u_int8_t *data,int len)$/;"	f
+IcmpSendEcho	MyEth-1/icmp.c	/^int IcmpSendEcho(int soc,struct in_addr *daddr,int seqNo,int size)$/;"	f
+IcmpSendEcho	MyEth-2/icmp.c	/^int IcmpSendEcho(int soc,struct in_addr *daddr,int seqNo,int size)$/;"	f
+IcmpSendEcho	MyEth-3/icmp.c	/^int IcmpSendEcho(int soc,struct in_addr *daddr,int seqNo,int size)$/;"	f
+IcmpSendEchoReply	MyEth-1/icmp.c	/^int IcmpSendEchoReply(int soc,struct ip *r_ip,struct icmp *r_icmp,u_int8_t *data,int len,int ip_ttl)$/;"	f
+IcmpSendEchoReply	MyEth-2/icmp.c	/^int IcmpSendEchoReply(int soc,struct ip *r_ip,struct icmp *r_icmp,u_int8_t *data,int len,int ip_ttl)$/;"	f
+IcmpSendEchoReply	MyEth-3/icmp.c	/^int IcmpSendEchoReply(int soc,struct ip *r_ip,struct icmp *r_icmp,u_int8_t *data,int len,int ip_ttl)$/;"	f
+IpRecv	MyEth-1/ip.c	/^int IpRecv(int soc,u_int8_t *raw,int raw_len,struct ether_header *eh,u_int8_t *data,int len)$/;"	f
+IpRecv	MyEth-2/ip.c	/^int IpRecv(int soc,u_int8_t *raw,int raw_len,struct ether_header *eh,u_int8_t *data,int len)$/;"	f
+IpRecv	MyEth-3/ip.c	/^int IpRecv(int soc,u_int8_t *raw,int raw_len,struct ether_header *eh,u_int8_t *data,int len)$/;"	f
+IpRecvBuf	MyEth-1/ip.c	/^IP_RECV_BUF	IpRecvBuf[IP_RECV_BUF_NO];$/;"	v
+IpRecvBuf	MyEth-2/ip.c	/^IP_RECV_BUF	IpRecvBuf[IP_RECV_BUF_NO];$/;"	v
+IpRecvBuf	MyEth-3/ip.c	/^IP_RECV_BUF	IpRecvBuf[IP_RECV_BUF_NO];$/;"	v
+IpRecvBufAdd	MyEth-1/ip.c	/^int IpRecvBufAdd(u_int16_t id)$/;"	f
+IpRecvBufAdd	MyEth-2/ip.c	/^int IpRecvBufAdd(u_int16_t id)$/;"	f
+IpRecvBufAdd	MyEth-3/ip.c	/^int IpRecvBufAdd(u_int16_t id)$/;"	f
+IpRecvBufDel	MyEth-1/ip.c	/^int IpRecvBufDel(u_int16_t id)$/;"	f
+IpRecvBufDel	MyEth-2/ip.c	/^int IpRecvBufDel(u_int16_t id)$/;"	f
+IpRecvBufDel	MyEth-3/ip.c	/^int IpRecvBufDel(u_int16_t id)$/;"	f
+IpRecvBufInit	MyEth-1/ip.c	/^int IpRecvBufInit()$/;"	f
+IpRecvBufInit	MyEth-2/ip.c	/^int IpRecvBufInit()$/;"	f
+IpRecvBufInit	MyEth-3/ip.c	/^int IpRecvBufInit()$/;"	f
+IpRecvBufSearch	MyEth-1/ip.c	/^int IpRecvBufSearch(u_int16_t id)$/;"	f
+IpRecvBufSearch	MyEth-2/ip.c	/^int IpRecvBufSearch(u_int16_t id)$/;"	f
+IpRecvBufSearch	MyEth-3/ip.c	/^int IpRecvBufSearch(u_int16_t id)$/;"	f
+IpSend	MyEth-1/ip.c	/^int IpSend(int soc,struct in_addr *saddr,struct in_addr *daddr,u_int8_t proto,int dontFlagment,int ttl,u_int8_t *data,int len)$/;"	f
+IpSend	MyEth-2/ip.c	/^int IpSend(int soc,struct in_addr *saddr,struct in_addr *daddr,u_int8_t proto,int dontFlagment,int ttl,u_int8_t *data,int len)$/;"	f
+IpSend	MyEth-3/ip.c	/^int IpSend(int soc,struct in_addr *saddr,struct in_addr *daddr,u_int8_t proto,int dontFlagment,int ttl,u_int8_t *data,int len)$/;"	f
+IpSendLink	MyEth-1/ip.c	/^int IpSendLink(int soc,u_int8_t smac[6],u_int8_t dmac[6],struct in_addr *saddr,struct in_addr *daddr,u_int8_t proto,int dontFlagment,int ttl,u_int8_t *data,int len)$/;"	f
+IpSendLink	MyEth-2/ip.c	/^int IpSendLink(int soc,u_int8_t smac[6],u_int8_t dmac[6],struct in_addr *saddr,struct in_addr *daddr,u_int8_t proto,int dontFlagment,int ttl,u_int8_t *data,int len)$/;"	f
+IpSendLink	MyEth-3/ip.c	/^int IpSendLink(int soc,u_int8_t smac[6],u_int8_t dmac[6],struct in_addr *saddr,struct in_addr *daddr,u_int8_t proto,int dontFlagment,int ttl,u_int8_t *data,int len)$/;"	f
+IpTTL	MyEth-1/param.h	/^	int	IpTTL;$/;"	m	struct:__anon4
+IpTTL	MyEth-2/param.h	/^	int	IpTTL;$/;"	m	struct:__anon10
+IpTTL	MyEth-3/param.h	/^	int	IpTTL;$/;"	m	struct:__anon19
+LDFLAGS	MyEth-1/Makefile	/^LDFLAGS=-lpthread$/;"	m
+LDFLAGS	MyEth-2/Makefile	/^LDFLAGS=-lpthread$/;"	m
+LDFLAGS	MyEth-3/Makefile	/^LDFLAGS=-lpthread$/;"	m
+MSS	MyEth-3/param.h	/^	int	MSS;$/;"	m	struct:__anon19
+MTU	MyEth-1/param.h	/^	int	MTU;$/;"	m	struct:__anon4
+MTU	MyEth-2/param.h	/^	int	MTU;$/;"	m	struct:__anon10
+MTU	MyEth-3/param.h	/^	int	MTU;$/;"	m	struct:__anon19
+MakeDhcpRequest	MyEth-2/dhcp.c	/^int MakeDhcpRequest(struct dhcp_packet *pa,u_int8_t mtype,struct in_addr *ciaddr,struct in_addr *req_ip,struct in_addr *server)$/;"	f
+MakeDhcpRequest	MyEth-3/dhcp.c	/^int MakeDhcpRequest(struct dhcp_packet *pa,u_int8_t mtype,struct in_addr *ciaddr,struct in_addr *req_ip,struct in_addr *server)$/;"	f
+MakeString	MyEth-2/cmd.c	/^int MakeString(char *data)$/;"	f
+MakeString	MyEth-3/cmd.c	/^int MakeString(char *data)$/;"	f
+MyEthThread	MyEth-1/main.c	/^void *MyEthThread(void *arg) \/* 送受信スレッド *\/$/;"	f
+MyEthThread	MyEth-2/main.c	/^void *MyEthThread(void *arg)$/;"	f
+MyEthThread	MyEth-3/main.c	/^void *MyEthThread(void *arg)$/;"	f
+OBJS	MyEth-1/Makefile	/^OBJS=main.o param.o sock.o ether.o arp.o ip.o icmp.o cmd.o$/;"	m
+OBJS	MyEth-2/Makefile	/^OBJS=main.o param.o sock.o ether.o arp.o ip.o icmp.o udp.o dhcp.o cmd.o$/;"	m
+OBJS	MyEth-3/Makefile	/^OBJS=main.o param.o sock.o ether.o arp.o ip.o icmp.o udp.o tcp.o dhcp.o cmd.o$/;"	m
+OPTION	MyEth-2/dhcp.h	/^}OPTION;$/;"	t	typeref:struct:__anon9
+OPTION	MyEth-3/dhcp.h	/^}OPTION;$/;"	t	typeref:struct:__anon18
+OPTION_STR_MAX	MyEth-2/dhcp.h	52;"	d
+OPTION_STR_MAX	MyEth-3/dhcp.h	52;"	d
+PARAM	MyEth-1/param.h	/^}PARAM;$/;"	t	typeref:struct:__anon4
+PARAM	MyEth-2/param.h	/^}PARAM;$/;"	t	typeref:struct:__anon10
+PARAM	MyEth-3/param.h	/^}PARAM;$/;"	t	typeref:struct:__anon19
+PING_DATA	MyEth-1/icmp.c	/^}PING_DATA;$/;"	t	typeref:struct:__anon2	file:
+PING_DATA	MyEth-2/icmp.c	/^}PING_DATA;$/;"	t	typeref:struct:__anon7	file:
+PING_DATA	MyEth-3/icmp.c	/^}PING_DATA;$/;"	t	typeref:struct:__anon16	file:
+PING_SEND_NO	MyEth-1/icmp.c	20;"	d	file:
+PING_SEND_NO	MyEth-2/icmp.c	20;"	d	file:
+PING_SEND_NO	MyEth-3/icmp.c	20;"	d	file:
+PROGRAM	MyEth-1/Makefile	/^PROGRAM=MyEth$/;"	m
+PROGRAM	MyEth-2/Makefile	/^PROGRAM=MyEth$/;"	m
+PROGRAM	MyEth-3/Makefile	/^PROGRAM=MyEth$/;"	m
+Param	MyEth-1/main.c	/^PARAM	Param;$/;"	v
+Param	MyEth-2/main.c	/^PARAM	Param;$/;"	v
+Param	MyEth-3/main.c	/^PARAM	Param;$/;"	v
+ParamFname	MyEth-1/param.c	/^static char	*ParamFname=NULL;$/;"	v	file:
+ParamFname	MyEth-2/param.c	/^static char	*ParamFname=NULL;$/;"	v	file:
+ParamFname	MyEth-3/param.c	/^static char	*ParamFname=NULL;$/;"	v	file:
+PingCheckReply	MyEth-1/icmp.c	/^int PingCheckReply(struct ip *ip,struct icmp *icmp)$/;"	f
+PingCheckReply	MyEth-2/icmp.c	/^int PingCheckReply(struct ip *ip,struct icmp *icmp)$/;"	f
+PingCheckReply	MyEth-3/icmp.c	/^int PingCheckReply(struct ip *ip,struct icmp *icmp)$/;"	f
+PingData	MyEth-1/icmp.c	/^PING_DATA	PingData[PING_SEND_NO];$/;"	v
+PingData	MyEth-2/icmp.c	/^PING_DATA	PingData[PING_SEND_NO];$/;"	v
+PingData	MyEth-3/icmp.c	/^PING_DATA	PingData[PING_SEND_NO];$/;"	v
+PingSend	MyEth-1/icmp.c	/^int PingSend(int soc,struct in_addr *daddr,int size)$/;"	f
+PingSend	MyEth-2/icmp.c	/^int PingSend(int soc,struct in_addr *daddr,int size)$/;"	f
+PingSend	MyEth-3/icmp.c	/^int PingSend(int soc,struct in_addr *daddr,int size)$/;"	f
+RETRY_COUNT	MyEth-1/param.h	6;"	d
+RETRY_COUNT	MyEth-2/param.h	6;"	d
+RETRY_COUNT	MyEth-3/param.h	7;"	d
+ReadParam	MyEth-1/param.c	/^int ReadParam(char *fname)$/;"	f
+ReadParam	MyEth-2/param.c	/^int ReadParam(char *fname)$/;"	f
+ReadParam	MyEth-3/param.c	/^int ReadParam(char *fname)$/;"	f
+SRCS	MyEth-1/Makefile	/^SRCS=$(OBJS:%.o=%.c)$/;"	m
+SRCS	MyEth-2/Makefile	/^SRCS=$(OBJS:%.o=%.c)$/;"	m
+SRCS	MyEth-3/Makefile	/^SRCS=$(OBJS:%.o=%.c)$/;"	m
+SetDefaultParam	MyEth-1/param.c	/^int SetDefaultParam()$/;"	f
+SetDefaultParam	MyEth-2/param.c	/^int SetDefaultParam()$/;"	f
+SetDefaultParam	MyEth-3/param.c	/^int SetDefaultParam()$/;"	f
+StdInThread	MyEth-1/main.c	/^void *StdInThread(void *arg)$/;"	f
+StdInThread	MyEth-2/main.c	/^void *StdInThread(void *arg)$/;"	f
+StdInThread	MyEth-3/main.c	/^void *StdInThread(void *arg)$/;"	f
+TCP_FIN_TIMEOUT	MyEth-3/param.h	9;"	d
+TCP_INIT_WINDOW	MyEth-3/param.h	8;"	d
+TCP_TABLE	MyEth-3/tcp.c	/^}TCP_TABLE;$/;"	t	typeref:struct:__anon11	file:
+TCP_TABLE_NO	MyEth-3/tcp.c	29;"	d	file:
+TcpAddTable	MyEth-3/tcp.c	/^int TcpAddTable(u_int16_t port)$/;"	f
+TcpAllSocketClose	MyEth-3/tcp.c	/^int TcpAllSocketClose(int soc)$/;"	f
+TcpChecksum	MyEth-3/tcp.c	/^u_int16_t TcpChecksum(struct in_addr *saddr,struct in_addr *daddr,u_int8_t proto,u_int8_t *data,int len)$/;"	f
+TcpClose	MyEth-3/tcp.c	/^int TcpClose(int soc,u_int16_t sport)$/;"	f
+TcpConnect	MyEth-3/tcp.c	/^int TcpConnect(int soc,u_int16_t sport,struct in_addr *daddr,u_int16_t dport)$/;"	f
+TcpRecv	MyEth-3/tcp.c	/^int TcpRecv(int soc,struct ether_header *eh,struct ip *ip,u_int8_t *data,int len)$/;"	f
+TcpReset	MyEth-3/tcp.c	/^int TcpReset(int soc,u_int16_t sport)$/;"	f
+TcpSearchFreePort	MyEth-3/tcp.c	/^u_int16_t TcpSearchFreePort()$/;"	f
+TcpSearchTable	MyEth-3/tcp.c	/^int TcpSearchTable(u_int16_t port)$/;"	f
+TcpSend	MyEth-3/tcp.c	/^int TcpSend(int soc,u_int16_t sport,u_int8_t *data,int len)$/;"	f
+TcpSendAck	MyEth-3/tcp.c	/^int TcpSendAck(int soc,int no)$/;"	f
+TcpSendData	MyEth-3/tcp.c	/^int TcpSendData(int soc,u_int16_t sport,u_int8_t *data,int len)$/;"	f
+TcpSendFin	MyEth-3/tcp.c	/^int TcpSendFin(int soc,int no)$/;"	f
+TcpSendRst	MyEth-3/tcp.c	/^int TcpSendRst(int soc,int no)$/;"	f
+TcpSendRstDirect	MyEth-3/tcp.c	/^int TcpSendRstDirect(int soc,struct ether_header *r_eh,struct ip *r_ip,struct tcphdr *r_tcp)$/;"	f
+TcpSendSyn	MyEth-3/tcp.c	/^int TcpSendSyn(int soc,int no,int ackFlag)$/;"	f
+TcpShowTable	MyEth-3/tcp.c	/^int TcpShowTable()$/;"	f
+TcpSocketClose	MyEth-3/tcp.c	/^int TcpSocketClose(u_int16_t port)$/;"	f
+TcpSocketListen	MyEth-3/tcp.c	/^int TcpSocketListen(u_int16_t port)$/;"	f
+TcpStatusStr	MyEth-3/tcp.c	/^char *TcpStatusStr(int status)$/;"	f
+TcpTable	MyEth-3/tcp.c	/^TCP_TABLE	TcpTable[TCP_TABLE_NO];$/;"	v
+TcpTableLock	MyEth-3/tcp.c	/^pthread_rwlock_t	TcpTableLock=PTHREAD_RWLOCK_INITIALIZER;$/;"	v
+UDP_TABLE	MyEth-2/udp.c	/^}UDP_TABLE;$/;"	t	typeref:struct:__anon5	file:
+UDP_TABLE	MyEth-3/udp.c	/^}UDP_TABLE;$/;"	t	typeref:struct:__anon14	file:
+UDP_TABLE_NO	MyEth-2/udp.c	31;"	d	file:
+UDP_TABLE_NO	MyEth-3/udp.c	31;"	d	file:
+UdpAddTable	MyEth-2/udp.c	/^int UdpAddTable(u_int16_t port)$/;"	f
+UdpAddTable	MyEth-3/udp.c	/^int UdpAddTable(u_int16_t port)$/;"	f
+UdpChecksum	MyEth-2/udp.c	/^u_int16_t UdpChecksum(struct in_addr *saddr,struct in_addr *daddr,u_int8_t proto,u_int8_t *data,int len)$/;"	f
+UdpChecksum	MyEth-3/udp.c	/^u_int16_t UdpChecksum(struct in_addr *saddr,struct in_addr *daddr,u_int8_t proto,u_int8_t *data,int len)$/;"	f
+UdpRecv	MyEth-2/udp.c	/^int UdpRecv(int soc,struct ether_header *eh,struct ip *ip,u_int8_t *data,int len)$/;"	f
+UdpRecv	MyEth-3/udp.c	/^int UdpRecv(int soc,struct ether_header *eh,struct ip *ip,u_int8_t *data,int len)$/;"	f
+UdpSearchFreePort	MyEth-2/udp.c	/^u_int16_t UdpSearchFreePort()$/;"	f
+UdpSearchFreePort	MyEth-3/udp.c	/^u_int16_t UdpSearchFreePort()$/;"	f
+UdpSearchTable	MyEth-2/udp.c	/^int UdpSearchTable(u_int16_t port)$/;"	f
+UdpSearchTable	MyEth-3/udp.c	/^int UdpSearchTable(u_int16_t port)$/;"	f
+UdpSend	MyEth-2/udp.c	/^int UdpSend(int soc,struct in_addr *saddr,struct in_addr *daddr,u_int16_t sport,u_int16_t dport,int dontFlagment,u_int8_t *data,int len)$/;"	f
+UdpSend	MyEth-3/udp.c	/^int UdpSend(int soc,struct in_addr *saddr,struct in_addr *daddr,u_int16_t sport,u_int16_t dport,int dontFlagment,u_int8_t *data,int len)$/;"	f
+UdpSendLink	MyEth-2/udp.c	/^int UdpSendLink(int soc,u_int8_t smac[6],u_int8_t dmac[6],struct in_addr *saddr,struct in_addr *daddr,u_int16_t sport,u_int16_t dport,int dontFlagment,u_int8_t *data,int len)$/;"	f
+UdpSendLink	MyEth-3/udp.c	/^int UdpSendLink(int soc,u_int8_t smac[6],u_int8_t dmac[6],struct in_addr *saddr,struct in_addr *daddr,u_int16_t sport,u_int16_t dport,int dontFlagment,u_int8_t *data,int len)$/;"	f
+UdpShowTable	MyEth-2/udp.c	/^int UdpShowTable()$/;"	f
+UdpShowTable	MyEth-3/udp.c	/^int UdpShowTable()$/;"	f
+UdpSocket	MyEth-2/udp.c	/^int UdpSocket(u_int16_t port)$/;"	f
+UdpSocket	MyEth-3/udp.c	/^int UdpSocket(u_int16_t port)$/;"	f
+UdpSocketClose	MyEth-2/udp.c	/^int UdpSocketClose(u_int16_t port)$/;"	f
+UdpSocketClose	MyEth-3/udp.c	/^int UdpSocketClose(u_int16_t port)$/;"	f
+UdpTable	MyEth-2/udp.c	/^UDP_TABLE	UdpTable[UDP_TABLE_NO];$/;"	v
+UdpTable	MyEth-3/udp.c	/^UDP_TABLE	UdpTable[UDP_TABLE_NO];$/;"	v
+UdpTableLock	MyEth-2/udp.c	/^pthread_rwlock_t	UdpTableLock=PTHREAD_RWLOCK_INITIALIZER;$/;"	v
+UdpTableLock	MyEth-3/udp.c	/^pthread_rwlock_t	UdpTableLock=PTHREAD_RWLOCK_INITIALIZER;$/;"	v
+chaddr	MyEth-2/dhcp.h	/^	u_int8_t	chaddr [16];	\/* 24: Client hardware address *\/$/;"	m	struct:dhcp_packet
+chaddr	MyEth-3/dhcp.h	/^	u_int8_t	chaddr [16];	\/* 24: Client hardware address *\/$/;"	m	struct:dhcp_packet
+checksum	MyEth-1/sock.c	/^u_int16_t checksum(u_int8_t *data,int len)$/;"	f
+checksum	MyEth-2/sock.c	/^u_int16_t checksum(u_int8_t *data,int len)$/;"	f
+checksum	MyEth-3/sock.c	/^u_int16_t checksum(u_int8_t *data,int len)$/;"	f
+checksum2	MyEth-1/sock.c	/^u_int16_t checksum2(u_int8_t *data1,int len1,u_int8_t *data2,int len2)$/;"	f
+checksum2	MyEth-2/sock.c	/^u_int16_t checksum2(u_int8_t *data1,int len1,u_int8_t *data2,int len2)$/;"	f
+checksum2	MyEth-3/sock.c	/^u_int16_t checksum2(u_int8_t *data1,int len1,u_int8_t *data2,int len2)$/;"	f
+ciaddr	MyEth-2/dhcp.h	/^	struct in_addr ciaddr;  \/* 12: Client IP address (if already in use) *\/$/;"	m	struct:dhcp_packet	typeref:struct:dhcp_packet::in_addr
+ciaddr	MyEth-3/dhcp.h	/^	struct in_addr ciaddr;  \/* 12: Client IP address (if already in use) *\/$/;"	m	struct:dhcp_packet	typeref:struct:dhcp_packet::in_addr
+data	MyEth-1/ip.c	/^	u_int8_t	data[64*1024];$/;"	m	struct:__anon1	file:
+data	MyEth-2/dhcp.h	/^	char	*data;$/;"	m	struct:__anon9
+data	MyEth-2/ip.c	/^	u_int8_t	data[64*1024];$/;"	m	struct:__anon6	file:
+data	MyEth-3/dhcp.h	/^	char	*data;$/;"	m	struct:__anon18
+data	MyEth-3/ip.c	/^	u_int8_t	data[64*1024];$/;"	m	struct:__anon15	file:
+device	MyEth-1/param.h	/^	char	*device;$/;"	m	struct:__anon4
+device	MyEth-2/param.h	/^	char	*device;$/;"	m	struct:__anon10
+device	MyEth-3/param.h	/^	char	*device;$/;"	m	struct:__anon19
+dhcp_get_option	MyEth-2/dhcp.c	/^int dhcp_get_option(struct dhcp_packet *pa,int size,int opno,void *val)$/;"	f
+dhcp_get_option	MyEth-3/dhcp.c	/^int dhcp_get_option(struct dhcp_packet *pa,int size,int opno,void *val)$/;"	f
+dhcp_packet	MyEth-2/dhcp.h	/^struct dhcp_packet {$/;"	s
+dhcp_packet	MyEth-3/dhcp.h	/^struct dhcp_packet {$/;"	s
+dhcp_set_option	MyEth-2/dhcp.c	/^u_int8_t *dhcp_set_option(u_int8_t *ptr,int tag,int size,u_int8_t *buf)$/;"	f
+dhcp_set_option	MyEth-3/dhcp.c	/^u_int8_t *dhcp_set_option(u_int8_t *ptr,int tag,int size,u_int8_t *buf)$/;"	f
+dstAddr	MyEth-3/tcp.c	/^	struct in_addr	dstAddr;$/;"	m	struct:__anon11	typeref:struct:__anon11::in_addr	file:
+dstPort	MyEth-3/tcp.c	/^	u_int16_t	myPort,dstPort;$/;"	m	struct:__anon11	file:
+dummy	MyEth-2/udp.c	/^	u_int8_t	dummy;$/;"	m	struct:pseudo_ip	file:
+dummy	MyEth-3/tcp.c	/^        u_int8_t	dummy;$/;"	m	struct:pseudo_ip	file:
+dummy	MyEth-3/udp.c	/^	u_int8_t	dummy;$/;"	m	struct:pseudo_ip	file:
+ending	MyEth-1/main.c	/^int ending()$/;"	f
+ending	MyEth-2/main.c	/^int ending()$/;"	f
+ending	MyEth-3/main.c	/^int ending()$/;"	f
+file	MyEth-2/dhcp.h	/^	char file [DHCP_FILE_LEN];	\/* 104: Boot filename *\/$/;"	m	struct:dhcp_packet
+file	MyEth-3/dhcp.h	/^	char file [DHCP_FILE_LEN];	\/* 104: Boot filename *\/$/;"	m	struct:dhcp_packet
+flags	MyEth-2/dhcp.h	/^	u_int16_t flags;	\/* 10: Flag bits *\/$/;"	m	struct:dhcp_packet
+flags	MyEth-3/dhcp.h	/^	u_int16_t flags;	\/* 10: Flag bits *\/$/;"	m	struct:dhcp_packet
+gateway	MyEth-1/param.h	/^	struct in_addr	gateway;$/;"	m	struct:__anon4	typeref:struct:__anon4::in_addr
+gateway	MyEth-2/param.h	/^	struct in_addr	gateway;$/;"	m	struct:__anon10	typeref:struct:__anon10::in_addr
+gateway	MyEth-3/param.h	/^	struct in_addr	gateway;$/;"	m	struct:__anon19	typeref:struct:__anon19::in_addr
+giaddr	MyEth-2/dhcp.h	/^	struct in_addr giaddr;  \/* 20: DHCP relay agent IP address *\/$/;"	m	struct:dhcp_packet	typeref:struct:dhcp_packet::in_addr
+giaddr	MyEth-3/dhcp.h	/^	struct in_addr giaddr;  \/* 20: DHCP relay agent IP address *\/$/;"	m	struct:dhcp_packet	typeref:struct:dhcp_packet::in_addr
+hlen	MyEth-2/dhcp.h	/^	u_int8_t  hlen;		\/* 2: Hardware addr length *\/$/;"	m	struct:dhcp_packet
+hlen	MyEth-3/dhcp.h	/^	u_int8_t  hlen;		\/* 2: Hardware addr length *\/$/;"	m	struct:dhcp_packet
+hops	MyEth-2/dhcp.h	/^	u_int8_t  hops;		\/* 3: Number of relay agent hops from client *\/$/;"	m	struct:dhcp_packet
+hops	MyEth-3/dhcp.h	/^	u_int8_t  hops;		\/* 3: Number of relay agent hops from client *\/$/;"	m	struct:dhcp_packet
+htype	MyEth-2/dhcp.h	/^	u_int8_t  htype;	\/* 1: Hardware addr type (net\/if_types.h) *\/$/;"	m	struct:dhcp_packet
+htype	MyEth-3/dhcp.h	/^	u_int8_t  htype;	\/* 1: Hardware addr type (net\/if_types.h) *\/$/;"	m	struct:dhcp_packet
+id	MyEth-1/ip.c	/^	int	id;$/;"	m	struct:__anon1	file:
+id	MyEth-2/ip.c	/^	int	id;$/;"	m	struct:__anon6	file:
+id	MyEth-3/ip.c	/^	int	id;$/;"	m	struct:__anon15	file:
+init_socket	MyEth-1/sock.c	/^int init_socket(char *device)$/;"	f
+init_socket	MyEth-2/sock.c	/^int init_socket(char *device)$/;"	f
+init_socket	MyEth-3/sock.c	/^int init_socket(char *device)$/;"	f
+ip_dst	MyEth-2/udp.c	/^	struct in_addr  ip_dst;$/;"	m	struct:pseudo_ip	typeref:struct:pseudo_ip::in_addr	file:
+ip_dst	MyEth-3/tcp.c	/^        struct in_addr  ip_dst;$/;"	m	struct:pseudo_ip	typeref:struct:pseudo_ip::in_addr	file:
+ip_dst	MyEth-3/udp.c	/^	struct in_addr  ip_dst;$/;"	m	struct:pseudo_ip	typeref:struct:pseudo_ip::in_addr	file:
+ip_len	MyEth-2/udp.c	/^	u_int16_t	ip_len;$/;"	m	struct:pseudo_ip	file:
+ip_len	MyEth-3/tcp.c	/^        u_int16_t	ip_len;$/;"	m	struct:pseudo_ip	file:
+ip_len	MyEth-3/udp.c	/^	u_int16_t	ip_len;$/;"	m	struct:pseudo_ip	file:
+ip_p	MyEth-2/udp.c	/^	u_int8_t	ip_p;$/;"	m	struct:pseudo_ip	file:
+ip_p	MyEth-3/tcp.c	/^        u_int8_t	ip_p;$/;"	m	struct:pseudo_ip	file:
+ip_p	MyEth-3/udp.c	/^	u_int8_t	ip_p;$/;"	m	struct:pseudo_ip	file:
+ip_src	MyEth-2/udp.c	/^	struct in_addr  ip_src;$/;"	m	struct:pseudo_ip	typeref:struct:pseudo_ip::in_addr	file:
+ip_src	MyEth-3/tcp.c	/^        struct in_addr  ip_src;$/;"	m	struct:pseudo_ip	typeref:struct:pseudo_ip::in_addr	file:
+ip_src	MyEth-3/udp.c	/^	struct in_addr  ip_src;$/;"	m	struct:pseudo_ip	typeref:struct:pseudo_ip::in_addr	file:
+ipaddr	MyEth-1/arp.c	/^	struct in_addr	ipaddr;$/;"	m	struct:__anon3	typeref:struct:__anon3::in_addr	file:
+ipaddr	MyEth-2/arp.c	/^	struct in_addr	ipaddr;$/;"	m	struct:__anon8	typeref:struct:__anon8::in_addr	file:
+ipaddr	MyEth-3/arp.c	/^	struct in_addr	ipaddr;$/;"	m	struct:__anon17	typeref:struct:__anon17::in_addr	file:
+irs	MyEth-3/tcp.c	/^		u_int32_t	irs;	\/\/ 初期受信シーケンス番号$/;"	m	struct:__anon11::__anon13	file:
+isSameSubnet	MyEth-1/param.c	/^int isSameSubnet(struct in_addr *addr)$/;"	f
+isSameSubnet	MyEth-2/param.c	/^int isSameSubnet(struct in_addr *addr)$/;"	f
+isSameSubnet	MyEth-3/param.c	/^int isSameSubnet(struct in_addr *addr)$/;"	f
+isTargetIPAddr	MyEth-1/param.c	/^int isTargetIPAddr(struct in_addr *addr)$/;"	f
+isTargetIPAddr	MyEth-2/param.c	/^int isTargetIPAddr(struct in_addr *addr)$/;"	f
+isTargetIPAddr	MyEth-3/param.c	/^int isTargetIPAddr(struct in_addr *addr)$/;"	f
+iss	MyEth-3/tcp.c	/^		u_int32_t	iss;	\/\/ 初期送信シーケンス番号$/;"	m	struct:__anon11::__anon12	file:
+kind	MyEth-2/dhcp.h	/^	char	kind;$/;"	m	struct:__anon9
+kind	MyEth-3/dhcp.h	/^	char	kind;$/;"	m	struct:__anon18
+len	MyEth-1/ip.c	/^	int	len;$/;"	m	struct:__anon1	file:
+len	MyEth-2/dhcp.h	/^	int	len;$/;"	m	struct:__anon9
+len	MyEth-2/ip.c	/^	int	len;$/;"	m	struct:__anon6	file:
+len	MyEth-3/dhcp.h	/^	int	len;$/;"	m	struct:__anon18
+len	MyEth-3/ip.c	/^	int	len;$/;"	m	struct:__anon15	file:
+mac	MyEth-1/arp.c	/^	u_int8_t	mac[6];$/;"	m	struct:__anon3	file:
+mac	MyEth-2/arp.c	/^	u_int8_t	mac[6];$/;"	m	struct:__anon8	file:
+mac	MyEth-3/arp.c	/^	u_int8_t	mac[6];$/;"	m	struct:__anon17	file:
+main	MyEth-1/main.c	/^int main(int argc,char *argv[])$/;"	f
+main	MyEth-2/main.c	/^int main(int argc,char *argv[])$/;"	f
+main	MyEth-3/main.c	/^int main(int argc,char *argv[])$/;"	f
+myPort	MyEth-3/tcp.c	/^	u_int16_t	myPort,dstPort;$/;"	m	struct:__anon11	file:
+my_arp_ip_ntoa_r	MyEth-1/arp.c	/^char *my_arp_ip_ntoa_r(u_int8_t ip[4],char *buf)$/;"	f
+my_arp_ip_ntoa_r	MyEth-2/arp.c	/^char *my_arp_ip_ntoa_r(u_int8_t ip[4],char *buf)$/;"	f
+my_arp_ip_ntoa_r	MyEth-3/arp.c	/^char *my_arp_ip_ntoa_r(u_int8_t ip[4],char *buf)$/;"	f
+my_ether_aton	MyEth-1/ether.c	/^int my_ether_aton(char *str,u_int8_t *mac)$/;"	f
+my_ether_aton	MyEth-2/ether.c	/^int my_ether_aton(char *str,u_int8_t *mac)$/;"	f
+my_ether_aton	MyEth-3/ether.c	/^int my_ether_aton(char *str,u_int8_t *mac)$/;"	f
+my_ether_ntoa_r	MyEth-1/ether.c	/^char *my_ether_ntoa_r(u_int8_t *hwaddr,char *buf)$/;"	f
+my_ether_ntoa_r	MyEth-2/ether.c	/^char *my_ether_ntoa_r(u_int8_t *hwaddr,char *buf)$/;"	f
+my_ether_ntoa_r	MyEth-3/ether.c	/^char *my_ether_ntoa_r(u_int8_t *hwaddr,char *buf)$/;"	f
+myip	MyEth-1/param.h	/^	struct in_addr	myip;$/;"	m	struct:__anon4	typeref:struct:__anon4::in_addr
+myip	MyEth-2/param.h	/^	struct in_addr	myip;$/;"	m	struct:__anon10	typeref:struct:__anon10::in_addr
+myip	MyEth-3/param.h	/^	struct in_addr	myip;$/;"	m	struct:__anon19	typeref:struct:__anon19::in_addr
+mymac	MyEth-1/param.h	/^	u_int8_t	mymac[6];$/;"	m	struct:__anon4
+mymac	MyEth-2/param.h	/^	u_int8_t	mymac[6];$/;"	m	struct:__anon10
+mymac	MyEth-3/param.h	/^	u_int8_t	mymac[6];$/;"	m	struct:__anon19
+no	MyEth-2/dhcp.h	/^	int	no;$/;"	m	struct:__anon9
+no	MyEth-3/dhcp.h	/^	int	no;$/;"	m	struct:__anon18
+nxt	MyEth-3/tcp.c	/^		u_int32_t	nxt;	\/\/ 次の受信$/;"	m	struct:__anon11::__anon13	file:
+nxt	MyEth-3/tcp.c	/^		u_int32_t	nxt;	\/\/ 次の送信$/;"	m	struct:__anon11::__anon12	file:
+op	MyEth-2/dhcp.h	/^	u_int8_t  op;		\/* 0: Message opcode\/type *\/$/;"	m	struct:dhcp_packet
+op	MyEth-3/dhcp.h	/^	u_int8_t  op;		\/* 0: Message opcode\/type *\/$/;"	m	struct:dhcp_packet
+options	MyEth-2/dhcp.h	/^	u_int8_t	options [DHCP_OPTION_LEN];$/;"	m	struct:dhcp_packet
+options	MyEth-3/dhcp.h	/^	u_int8_t	options [DHCP_OPTION_LEN];$/;"	m	struct:dhcp_packet
+port	MyEth-2/udp.c	/^	u_int16_t	port;$/;"	m	struct:__anon5	file:
+port	MyEth-3/udp.c	/^	u_int16_t	port;$/;"	m	struct:__anon14	file:
+print_dhcp	MyEth-2/dhcp.c	/^int print_dhcp(struct dhcp_packet *pa,int size)$/;"	f
+print_dhcp	MyEth-3/dhcp.c	/^int print_dhcp(struct dhcp_packet *pa,int size)$/;"	f
+print_ether_arp	MyEth-1/arp.c	/^void print_ether_arp(struct ether_arp *ether_arp)$/;"	f
+print_ether_arp	MyEth-2/arp.c	/^void print_ether_arp(struct ether_arp *ether_arp)$/;"	f
+print_ether_arp	MyEth-3/arp.c	/^void print_ether_arp(struct ether_arp *ether_arp)$/;"	f
+print_ether_header	MyEth-1/ether.c	/^void print_ether_header(struct ether_header *eh)$/;"	f
+print_ether_header	MyEth-2/ether.c	/^void print_ether_header(struct ether_header *eh)$/;"	f
+print_ether_header	MyEth-3/ether.c	/^void print_ether_header(struct ether_header *eh)$/;"	f
+print_hex	MyEth-1/ether.c	/^int print_hex(u_int8_t *data,int size)$/;"	f
+print_hex	MyEth-2/ether.c	/^int print_hex(u_int8_t *data,int size)$/;"	f
+print_hex	MyEth-3/ether.c	/^int print_hex(u_int8_t *data,int size)$/;"	f
+print_icmp	MyEth-1/icmp.c	/^int print_icmp(struct icmp *icmp)$/;"	f
+print_icmp	MyEth-2/icmp.c	/^int print_icmp(struct icmp *icmp)$/;"	f
+print_icmp	MyEth-3/icmp.c	/^int print_icmp(struct icmp *icmp)$/;"	f
+print_ip	MyEth-1/ip.c	/^void print_ip(struct ip *ip)$/;"	f
+print_ip	MyEth-2/ip.c	/^void print_ip(struct ip *ip)$/;"	f
+print_ip	MyEth-3/ip.c	/^void print_ip(struct ip *ip)$/;"	f
+print_tcp	MyEth-3/tcp.c	/^int print_tcp(struct tcphdr *tcp)$/;"	f
+print_tcp_optpad	MyEth-3/tcp.c	/^int print_tcp_optpad(unsigned char *data,int size)$/;"	f
+print_udp	MyEth-2/udp.c	/^int print_udp(struct udphdr *udp)$/;"	f
+print_udp	MyEth-3/udp.c	/^int print_udp(struct udphdr *udp)$/;"	f
+pseudo_ip	MyEth-2/udp.c	/^struct pseudo_ip{$/;"	s	file:
+pseudo_ip	MyEth-3/tcp.c	/^struct pseudo_ip{$/;"	s	file:
+pseudo_ip	MyEth-3/udp.c	/^struct pseudo_ip{$/;"	s	file:
+rcv	MyEth-3/tcp.c	/^	}rcv;$/;"	m	struct:__anon11	typeref:struct:__anon11::__anon13	file:
+secs	MyEth-2/dhcp.h	/^	u_int16_t secs;		\/* 8: Seconds since client started looking *\/$/;"	m	struct:dhcp_packet
+secs	MyEth-3/dhcp.h	/^	u_int16_t secs;		\/* 8: Seconds since client started looking *\/$/;"	m	struct:dhcp_packet
+sendTime	MyEth-1/icmp.c	/^	struct timeval	sendTime;$/;"	m	struct:__anon2	typeref:struct:__anon2::timeval	file:
+sendTime	MyEth-2/icmp.c	/^	struct timeval	sendTime;$/;"	m	struct:__anon7	typeref:struct:__anon7::timeval	file:
+sendTime	MyEth-3/icmp.c	/^	struct timeval	sendTime;$/;"	m	struct:__anon16	typeref:struct:__anon16::timeval	file:
+show_ifreq	MyEth-1/main.c	/^int show_ifreq(char *name)$/;"	f
+show_ifreq	MyEth-2/main.c	/^int show_ifreq(char *name)$/;"	f
+show_ifreq	MyEth-3/main.c	/^int show_ifreq(char *name)$/;"	f
+siaddr	MyEth-2/dhcp.h	/^	struct in_addr siaddr;  \/* 18: IP address of next server to talk to *\/$/;"	m	struct:dhcp_packet	typeref:struct:dhcp_packet::in_addr
+siaddr	MyEth-3/dhcp.h	/^	struct in_addr siaddr;  \/* 18: IP address of next server to talk to *\/$/;"	m	struct:dhcp_packet	typeref:struct:dhcp_packet::in_addr
+sig_term	MyEth-1/main.c	/^void sig_term(int sig) \/* 終了シグナルハンドラ *\/$/;"	f
+sig_term	MyEth-2/main.c	/^void sig_term(int sig)$/;"	f
+sig_term	MyEth-3/main.c	/^void sig_term(int sig)$/;"	f
+sname	MyEth-2/dhcp.h	/^	char sname [DHCP_SNAME_LEN];	\/* 40: Server name *\/$/;"	m	struct:dhcp_packet
+sname	MyEth-3/dhcp.h	/^	char sname [DHCP_SNAME_LEN];	\/* 40: Server name *\/$/;"	m	struct:dhcp_packet
+snd	MyEth-3/tcp.c	/^	}snd;$/;"	m	struct:__anon11	typeref:struct:__anon11::__anon12	file:
+status	MyEth-3/tcp.c	/^	int	status;$/;"	m	struct:__anon11	file:
+timestamp	MyEth-1/arp.c	/^	time_t	timestamp;$/;"	m	struct:__anon3	file:
+timestamp	MyEth-1/ip.c	/^	time_t	timestamp;$/;"	m	struct:__anon1	file:
+timestamp	MyEth-2/arp.c	/^	time_t	timestamp;$/;"	m	struct:__anon8	file:
+timestamp	MyEth-2/ip.c	/^	time_t	timestamp;$/;"	m	struct:__anon6	file:
+timestamp	MyEth-3/arp.c	/^	time_t	timestamp;$/;"	m	struct:__anon17	file:
+timestamp	MyEth-3/ip.c	/^	time_t	timestamp;$/;"	m	struct:__anon15	file:
+una	MyEth-3/tcp.c	/^		u_int32_t	una;	\/\/ 未確認の送信$/;"	m	struct:__anon11::__anon12	file:
+vip	MyEth-1/param.h	/^	struct in_addr	vip;$/;"	m	struct:__anon4	typeref:struct:__anon4::in_addr
+vip	MyEth-2/param.h	/^	struct in_addr	vip;$/;"	m	struct:__anon10	typeref:struct:__anon10::in_addr
+vip	MyEth-3/param.h	/^	struct in_addr	vip;$/;"	m	struct:__anon19	typeref:struct:__anon19::in_addr
+vmac	MyEth-1/param.h	/^	u_int8_t	vmac[6];$/;"	m	struct:__anon4
+vmac	MyEth-2/param.h	/^	u_int8_t	vmac[6];$/;"	m	struct:__anon10
+vmac	MyEth-3/param.h	/^	u_int8_t	vmac[6];$/;"	m	struct:__anon19
+vmask	MyEth-1/param.h	/^	struct in_addr	vmask;$/;"	m	struct:__anon4	typeref:struct:__anon4::in_addr
+vmask	MyEth-2/param.h	/^	struct in_addr	vmask;$/;"	m	struct:__anon10	typeref:struct:__anon10::in_addr
+vmask	MyEth-3/param.h	/^	struct in_addr	vmask;$/;"	m	struct:__anon19	typeref:struct:__anon19::in_addr
+wnd	MyEth-3/tcp.c	/^		u_int32_t	wnd;	\/\/ 受信ウィンドウ$/;"	m	struct:__anon11::__anon13	file:
+wnd	MyEth-3/tcp.c	/^		u_int32_t	wnd;	\/\/ 送信ウインドウ$/;"	m	struct:__anon11::__anon12	file:
+xid	MyEth-2/dhcp.h	/^	u_int32_t xid;		\/* 4: Transaction ID *\/$/;"	m	struct:dhcp_packet
+xid	MyEth-3/dhcp.h	/^	u_int32_t xid;		\/* 4: Transaction ID *\/$/;"	m	struct:dhcp_packet
+yiaddr	MyEth-2/dhcp.h	/^	struct in_addr yiaddr;  \/* 16: Client IP address *\/$/;"	m	struct:dhcp_packet	typeref:struct:dhcp_packet::in_addr
+yiaddr	MyEth-3/dhcp.h	/^	struct in_addr yiaddr;  \/* 16: Client IP address *\/$/;"	m	struct:dhcp_packet	typeref:struct:dhcp_packet::in_addr

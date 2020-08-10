@@ -1,0 +1,8 @@
+IP-TTL=64
+MTU=1500
+device=ens161
+vmac=02:00:00:00:00:01
+vip=0.0.0.0
+vmask=0.0.0.0
+gateway=0.0.0.0
+DhcpRequestLeaseTime=600
