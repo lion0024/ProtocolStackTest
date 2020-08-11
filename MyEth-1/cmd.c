@@ -100,7 +100,8 @@ char	buf1[80];
 /* 終了コマンド処理 */
 int DoCmdEnd(char **cmdline)
 {
-	/* killで強制終了なのか */
+	/* exit()ではなくSIGTERMなのはなぜか
+	 * -> exit()は非同期シグナルセーフな関数ではないため */
 	kill(getpid(),SIGTERM);
 
 	return(0);

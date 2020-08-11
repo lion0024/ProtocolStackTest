@@ -142,12 +142,16 @@ int	padlen;
 
 	ptr=sbuf;
 	eh=(struct ether_header *)ptr;
+	/* イーサネットフレームを0クリアする */
 	memset(eh,0,sizeof(struct ether_header));
+	/* 送信先MACアドレスをフレームに格納 */
 	memcpy(eh->ether_dhost,dmac,6);
+	/* 送信元MACアドレス、Ether Typeをフレームに格納 */
 	memcpy(eh->ether_shost,smac,6);
 	eh->ether_type=htons(type);
 	ptr+=sizeof(struct ether_header);
 
+	/* ARPパケットにイーサネットフレームを合体させる */
 	memcpy(ptr,data,len);
 	ptr+=len;
 
@@ -157,6 +161,7 @@ int	padlen;
 		ptr+=padlen;
 	}
 
+	/* write()で相手側に書き込む */
 	write(soc,sbuf,ptr-sbuf);
 	print_ether_header(eh);
 

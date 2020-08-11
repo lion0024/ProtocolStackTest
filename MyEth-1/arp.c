@@ -300,6 +300,7 @@ int ArpSend(int soc,u_int16_t op,
 {
 struct ether_arp	arp;
 
+/* ARPのメモリ領域を0クリアする */
 	memset(&arp,0,sizeof(struct ether_arp));
 	arp.arp_hrd=htons(ARPHRD_ETHER);
 	arp.arp_pro=htons(ETHERTYPE_IP);
@@ -307,6 +308,7 @@ struct ether_arp	arp;
 	arp.arp_pln=4;
 	arp.arp_op=htons(op);
 
+	/* ARPパケット(メモリ領域に書き込む) */
 	memcpy(arp.arp_sha,smac,6);
 	memcpy(arp.arp_tha,dmac,6);
 
@@ -315,6 +317,7 @@ struct ether_arp	arp;
 
 printf("=== ARP ===[\n");
 
+/* 引数(u_int8_t *)&arpでARPパケットを渡す */
 	EtherSend(soc,e_smac,e_dmac,ETHERTYPE_ARP,(u_int8_t *)&arp,sizeof(struct ether_arp));
 
 print_ether_arp(&arp);
@@ -378,6 +381,7 @@ u_int8_t	*ptr=data;
 	ptr+=sizeof(struct ether_arp);
 	len-=sizeof(struct ether_arp);
 
+	/* ARP要求を受け取ったらARPリプライを返す */
 	if(ntohs(arp->arp_op)==ARPOP_REQUEST){
 		struct in_addr	addr;
 		addr.s_addr=(arp->arp_tpa[3]<<24)|(arp->arp_tpa[2]<<16)|(arp->arp_tpa[1]<<8)|(arp->arp_tpa[0]);
