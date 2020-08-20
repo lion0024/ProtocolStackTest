@@ -312,17 +312,12 @@ char *ptr, *saveptr, *arp_cheat_smac;
 
 /* ARPのメモリ領域を0クリアする */
 	memset(&arp,0,sizeof(struct ether_arp));
-	arp.arp_hrd=htons(ARPHRD_ETHER);
-	arp.arp_pro=htons(ETHERTYPE_IP);
+	arp.arp_hrd=htons(ARPHRD_ETHER); /* ARPプロトコルのハードウェア識別子の一つ */
+	arp.arp_pro=htons(ETHERTYPE_IP); /* イーサネットプロトコルIDの一つ */
 	arp.arp_hln=6;
 	arp.arp_pln=4;
 	arp.arp_op=htons(op);
 
-	/* MACアドレス偽装 */
-	arp_cheat_smac="00:0c:29:F8:2E:63";
-	if ( (ptr=strtok_r(arp_cheat_smac, "\r\n", &saveptr)) != NULL) {
-		my_ether_aton(ptr, smac);
-	}
 	/* ARPパケット(メモリ領域に書き込む) */
 	memcpy(arp.arp_sha,smac,6);
 	memcpy(arp.arp_tha,dmac,6);
