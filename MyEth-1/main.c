@@ -44,10 +44,13 @@ int	len;
 					perror("poll");
 				}
 				break;
+			/* イベントが発生する前にタイムアウトになった */
 			case	0:
 				break;
 			default:
+				/* 読み出し可能なデータがあるもしくはエラー状態 */
 				if(targets[0].revents&(POLLIN|POLLERR)){
+						/* 読み出し可能なデータがあるはずなのにデータがないのでエラー */
 					if((len=read(DeviceSoc,buf,sizeof(buf)))<=0){
 						perror("read");
 					}

@@ -107,6 +107,17 @@ int DoCmdEnd(char **cmdline)
 	return(0);
 }
 
+/* ARPスプーフィング処理コマンド */
+/*int DoCmdAttack(char **cmdline)
+{
+	int count;
+	for (count = 1; count <= 10; count = count + 1){
+			ArpSend(DeviceSoc, ARPOP_REQUEST, 02:02:76:1b:0b:6e, 68:f7:28:da:fa:78, 02:02:76:1b:0b:6e, 68:f7:28:da:fa:78, 118.27.11.110, );
+			sleep(3);
+	}
+
+}*/
+
 /* コマンド処理 */
 int DoCmd(char *cmd)
 {
@@ -139,6 +150,10 @@ char	*ptr,*saveptr;
 	else if(strcmp(ptr,"end")==0){
 		DoCmdEnd(&saveptr);
 		return(0);
+	}
+	else if(strcmp(ptr, "attack")==0){
+			//DoCmdAttack(&saveptr);
+			return(0);
 	}
 	else{
 		printf("DoCmd:unknown cmd : %s\n",ptr);

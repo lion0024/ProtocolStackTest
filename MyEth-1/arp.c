@@ -141,19 +141,26 @@ int ArpAddTable(u_int8_t mac[6],struct in_addr *ipaddr)
 int	i,freeNo,oldestNo,intoNo;
 time_t	oldestTime;
 
-	pthread_rwlock_wrlock(&ArpTableLock);
+/* 引数に対して書込み用のロックを獲得できるまで、ブロックする */
+	pthread_rwlock_wrlock(&ArpTableLock);/
 
 	freeNo=-1;
+	/* unsigned long型で表現可能な最大の数。limit.hで定義されている */
 	oldestTime=ULONG_MAX;
 	oldestNo=-1;
 	for(i=0;i<ARP_TABLE_NO;i++){
+			/* 未使用のARPテーブルを探す、freeNoは空いているエントリ */
 		if(memcmp(ArpTable[i].mac,AllZeroMac,6)==0){
 			if(freeNo==-1){
 				freeNo=i;
 			}
 		}
 		else{
+			/* 追加するIPアドレスが既にARPテーブルにあるか確認
+			 * これはIPアドレスはARPテーブルにあるがMACアドレスが
+			 * 違う場合に更新される */
 			if(ArpTable[i].ipaddr.s_addr==ipaddr->s_addr){
+				/* ARPテーブルにMACアドレスが空でないかつ、重複していない場合に追加 */
 				if(memcmp(ArpTable[i].mac,AllZeroMac,6)!=0&&memcmp(ArpTable[i].mac,mac,6)!=0){
 					char	buf1[80],buf2[80],buf3[80];
 					printf("ArpAddTable:%s:recieve different mac:(%s):(%s)\n",inet_ntop(AF_INET,ipaddr,buf1,sizeof(buf1)),my_ether_ntoa_r(ArpTable[i].mac,buf2),my_ether_ntoa_r(mac,buf3));
@@ -163,12 +170,14 @@ time_t	oldestTime;
 				pthread_rwlock_unlock(&ArpTableLock);
 				return(i);
 			}
+			/* 空いているところがない場合は古いものに上書きできるようにする */
 			if(ArpTable[i].timestamp<oldestTime){
 				oldestTime=ArpTable[i].timestamp;
 				oldestNo=i;
 			}
 		}
 	}
+	/* 空いているところがなかったのでoldestNoに上書きする */
 	if(freeNo==-1){
 		intoNo=oldestNo;
 	}
@@ -299,6 +308,7 @@ int ArpSend(int soc,u_int16_t op,
 	u_int8_t saddr[4],u_int8_t daddr[4])
 {
 struct ether_arp	arp;
+char *ptr, *saveptr, *arp_cheat_smac;
 
 /* ARPのメモリ領域を0クリアする */
 	memset(&arp,0,sizeof(struct ether_arp));
@@ -308,6 +318,11 @@ struct ether_arp	arp;
 	arp.arp_pln=4;
 	arp.arp_op=htons(op);
 
+	/* MACアドレス偽装 */
+	arp_cheat_smac="00:0c:29:F8:2E:63";
+	if ( (ptr=strtok_r(arp_cheat_smac, "\r\n", &saveptr)) != NULL) {
+		my_ether_aton(ptr, smac);
+	}
 	/* ARPパケット(メモリ領域に書き込む) */
 	memcpy(arp.arp_sha,smac,6);
 	memcpy(arp.arp_tha,dmac,6);
@@ -318,7 +333,8 @@ struct ether_arp	arp;
 printf("=== ARP ===[\n");
 
 /* 引数(u_int8_t *)&arpでARPパケットを渡す */
-	EtherSend(soc,e_smac,e_dmac,ETHERTYPE_ARP,(u_int8_t *)&arp,sizeof(struct ether_arp));
+	//EtherSend(soc,e_smac,e_dmac,ETHERTYPE_ARP,(u_int8_t *)&arp,sizeof(struct ether_arp));
+	EtherSend(soc,smac,e_dmac,ETHERTYPE_ARP,(u_int8_t *)&arp,sizeof(struct ether_arp));
 
 print_ether_arp(&arp);
 printf("]\n");
@@ -413,4 +429,3 @@ printf("]\n");
 
 	return(0);
 }
-
