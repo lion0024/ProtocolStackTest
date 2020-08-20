@@ -86,6 +86,7 @@ char	buf1[80];
 	printf("---ether_arp---\n");
 
 	printf("arp_hrd=%u",ntohs(ether_arp->arp_hrd));
+	/* ntohsは16ビットバイトオーダーを返すとあるがどうして23なのか */
 	if(ntohs(ether_arp->arp_hrd)<=23){
 		printf("(%s),",hrd[ntohs(ether_arp->arp_hrd)]);
 	}
@@ -93,17 +94,18 @@ char	buf1[80];
 		printf("(undefined),");
 	}
 	printf("arp_pro=%u",ntohs(ether_arp->arp_pro));
+	/* イーサネットプロトコルID */
 	switch(ntohs(ether_arp->arp_pro)){
-		case	ETHERTYPE_PUP:
+		case	ETHERTYPE_PUP: /* 大昔のプロトコルスイート */
 			printf("(Xerox POP)\n");
 			break;
-		case	ETHERTYPE_IP:
+		case	ETHERTYPE_IP: /* IP */
 			printf("(IP)\n");
 			break;
-		case	ETHERTYPE_ARP:
+		case	ETHERTYPE_ARP: /* ARP */
 			printf("(Address resolution)\n");
 			break;
-		case	ETHERTYPE_REVARP:
+		case	ETHERTYPE_REVARP: /* ARPリプライ */
 			printf("(Reverse ARP)\n");
 			break;
 		default:
@@ -328,8 +330,7 @@ char *ptr, *saveptr, *arp_cheat_smac;
 printf("=== ARP ===[\n");
 
 /* 引数(u_int8_t *)&arpでARPパケットを渡す */
-	//EtherSend(soc,e_smac,e_dmac,ETHERTYPE_ARP,(u_int8_t *)&arp,sizeof(struct ether_arp));
-	EtherSend(soc,smac,e_dmac,ETHERTYPE_ARP,(u_int8_t *)&arp,sizeof(struct ether_arp));
+EtherSend(soc,e_smac,e_dmac,ETHERTYPE_ARP,(u_int8_t *)&arp,sizeof(struct ether_arp));
 
 print_ether_arp(&arp);
 printf("]\n");

@@ -135,12 +135,14 @@ struct ether_header	*eh;
 u_int8_t	*ptr,sbuf[sizeof(struct ether_header)+ETHERMTU];
 int	padlen;
 
+	/* ETHERMTUはペイロードで扱える最大サイズ */
 	if(len>ETHERMTU){
 		printf("EtherSend:data too long:%d\n",len);
 		return(-1);
 	}
 
 	ptr=sbuf;
+	/* ether_header構造体にキャストする */
 	eh=(struct ether_header *)ptr;
 	/* イーサネットフレームを0クリアする */
 	memset(eh,0,sizeof(struct ether_header));
@@ -154,7 +156,8 @@ int	padlen;
 	/* ARPパケットにイーサネットフレームを合体させる */
 	memcpy(ptr,data,len);
 	ptr+=len;
-
+/* Ethernetでは小さすぎるパケットを異常なパケットとして破棄する 
+ * ETH_ZLENは最小パケットサイズを定めたもの */
 	if((ptr-sbuf)<ETH_ZLEN){
 		padlen=ETH_ZLEN-(ptr-sbuf);
 		memset(ptr,0,padlen);
