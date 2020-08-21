@@ -25,7 +25,7 @@ int	DeviceSoc;
 
 PARAM	Param;
 
-/* 送受信スレッド */
+/* 受信スレッド */
 void *MyEthThread(void *arg)
 {
 int	nready;
@@ -44,7 +44,7 @@ int	len;
 					perror("poll");
 				}
 				break;
-			/* イベントが発生する前にタイムアウトになった */
+			/* イベントが発生する前にタイムアウトになった場合 */
 			case	0:
 				break;
 			default:
