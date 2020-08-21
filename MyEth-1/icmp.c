@@ -15,8 +15,10 @@
 
 extern PARAM	Param;
 
+/* ECHOヘッダサイズのデファイン */
 #define ECHO_HDR_SIZE	(8)
 
+/* 何回pingを飛ばすか */
 #define	PING_SEND_NO	(4)
 
 typedef struct	{
@@ -119,6 +121,7 @@ u_int8_t	sbuf[64*1024];
 struct icmp	*icmp;
 
 	ptr=sbuf;
+	/* icmp構造体はnetinet/ip_icmp.hに定義されている */
 	icmp=(struct icmp *)ptr;
 	memset(icmp,0,sizeof(struct icmp));
 	icmp->icmp_type=ICMP_ECHO;
@@ -129,6 +132,7 @@ struct icmp	*icmp;
 
 	ptr+=ECHO_HDR_SIZE;
 
+	/* これが何をしているのかわからない */
 	psize=size-ECHO_HDR_SIZE;
 	for(i=0;i<psize;i++){
 		*ptr=(i&0xFF);ptr++;
@@ -141,6 +145,7 @@ printf("=== ICMP echo ===[\n");
 print_icmp(icmp);
 printf("]\n");
 
+	/* 時刻を取得し構造体に格納する */
 	gettimeofday(&PingData[seqNo-1].sendTime,NULL);
 
 	return (0);

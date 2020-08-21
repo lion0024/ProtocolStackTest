@@ -72,6 +72,7 @@ int	size;
 	}
 	inet_aton(ptr,&daddr);
 	if((ptr=strtok_r(NULL,"\r\n",cmdline))==NULL){
+		/* pingコマンドは第三引数でsizeを指定できる */
 		size=DEFAULT_PING_SIZE;
 	}
 	else{
