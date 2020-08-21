@@ -72,9 +72,11 @@ int	nready;
 struct pollfd	targets[1];
 char	buf[2048];
 
+	/* filenoはストリームステータスのチェックを行う */
 	targets[0].fd=fileno(stdin);
 	targets[0].events=POLLIN|POLLERR;
 
+	/* EndFlagはシグナルによって変更される */
 	while(EndFlag==0){
 		switch((nready=poll(targets,1,1000))){
 			case	-1:
@@ -87,6 +89,7 @@ char	buf[2048];
 			default:
 				if(targets[0].revents&(POLLIN|POLLERR)){
 					fgets(buf,sizeof(buf),stdin);
+					/* poll関数で監視して問題なければコマンド処理を行う */
 					DoCmd(buf);
 				}
 				break;

@@ -28,6 +28,7 @@ int DoCmdArp(char **cmdline)
 {
 char	*ptr;
 
+	/* strtok_rの戻り値は次のトークンへのポインタ */
 	if((ptr=strtok_r(NULL," \r\n",cmdline))==NULL){
 		printf("DoCmdArp:no arg\n");
 		return(-1);
@@ -37,6 +38,7 @@ char	*ptr;
 		return(0);
 	}
 	else if(strcmp(ptr,"-d")==0){
+		/* -dの後にIPアドレスが必要なため改行の削除を行う */
 		if((ptr=strtok_r(NULL," \r\n",cmdline))==NULL){
 			printf("DoCmdArp:-d no arg\n");
 			return(-1);
@@ -150,10 +152,6 @@ char	*ptr,*saveptr;
 	else if(strcmp(ptr,"end")==0){
 		DoCmdEnd(&saveptr);
 		return(0);
-	}
-	else if(strcmp(ptr, "attack")==0){
-			//DoCmdAttack(&saveptr);
-			return(0);
 	}
 	else{
 		printf("DoCmd:unknown cmd : %s\n",ptr);

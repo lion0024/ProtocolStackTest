@@ -207,6 +207,7 @@ int	i;
 		}
 		else{
 			if(ArpTable[i].ipaddr.s_addr==ipaddr->s_addr){
+				/* 指定されたARPテーブルを0クリアする */
 				memcpy(ArpTable[i].mac,AllZeroMac,6);
 				ArpTable[i].ipaddr.s_addr=0;
 				ArpTable[i].timestamp=0;
@@ -255,7 +256,7 @@ int	i;
 
 	for(i=0;i<ARP_TABLE_NO;i++){
 		/* 初期状態とARPテーブルを比較し差分(=書き込み)
-		 * があれば出力する */
+		 * がなければ何も出力しない */
 		if(memcmp(ArpTable[i].mac,AllZeroMac,6)==0){
 		}
 		else{
