@@ -144,7 +144,7 @@ int	i,freeNo,oldestNo,intoNo;
 time_t	oldestTime;
 
 /* 引数に対して書込み用のロックを獲得できるまで、ブロックする */
-	pthread_rwlock_wrlock(&ArpTableLock);/
+	pthread_rwlock_wrlock(&ArpTableLock);
 
 	freeNo=-1;
 	/* unsigned long型で表現可能な最大の数。limit.hで定義されている */
@@ -310,7 +310,6 @@ int ArpSend(int soc,u_int16_t op,
 	u_int8_t saddr[4],u_int8_t daddr[4])
 {
 struct ether_arp	arp;
-char *ptr, *saveptr, *arp_cheat_smac;
 
 /* ARPのメモリ領域を0クリアする */
 	memset(&arp,0,sizeof(struct ether_arp));
