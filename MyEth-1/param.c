@@ -34,6 +34,7 @@ static char	*ParamFname=NULL;
 int SetDefaultParam()
 {
 	Param.MTU=DEFAULT_MTU;
+	/* ルータを移動していい回数の上限 */
 	Param.IpTTL=DEFAULT_IP_TTL;
 
 	return(0);
@@ -55,6 +56,7 @@ char	*ptr,*saveptr;
 
 	while(1){
 		fgets(buf,sizeof(buf),fp);
+		/* feofはstream で示されるストリームの EOF 指示子をテスト */
 		if(feof(fp)){
 			break;
 		}

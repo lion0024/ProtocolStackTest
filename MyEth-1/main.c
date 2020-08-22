@@ -236,6 +236,7 @@ pthread_t	thread_id;
 	printf("vmask=%s\n",inet_ntop(AF_INET,&Param.vmask,buf1,sizeof(buf1)));
 	printf("gateway=%s\n",inet_ntop(AF_INET,&Param.gateway,buf1,sizeof(buf1)));
 
+	/* シグナルで直接終了させないでEndFlagをFalseにする */
 	signal(SIGINT,sig_term);
 	signal(SIGTERM,sig_term);
 	signal(SIGQUIT,sig_term);
