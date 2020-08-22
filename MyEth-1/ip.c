@@ -230,11 +230,13 @@ u_int8_t	*dptr,*ptr,sbuf[ETHERMTU];
 u_int16_t	id;
 int	lest,sndLen,off,flagment;
 
+	/* リンクレイヤーではフラグメント化しないようにMTUで制限されている */
 	if(dontFlagment&&len>Param.MTU-sizeof(struct ip)){
 		printf("IpSend:data too long:%d\n",len);
 		return(-1);
 	}
 
+	/* IDはランダム */
 	id=random();
 
 	dptr=data;
@@ -251,6 +253,7 @@ int	lest,sndLen,off,flagment;
 		}
 
 		ptr=sbuf;
+		/* IPパケットの作成,構造体に格納している */
 		ip=(struct ip *)ptr;
 		memset(ip,0,sizeof(struct ip));
 		ip->ip_v=4;
@@ -278,6 +281,7 @@ int	lest,sndLen,off,flagment;
 		memcpy(ptr,dptr,sndLen);
 		ptr+=sndLen;
 
+		/* pingにはIPパケット、イーサネットフレームが必要になる */
 		EtherSend(soc,smac,dmac,ETHERTYPE_IP,sbuf,ptr-sbuf);
 		print_ip(ip);
 
@@ -296,6 +300,8 @@ char	buf1[80];
 int	ret;
 
 	if(GetTargetMac(soc,daddr,dmac,0)){
+		/* IPパケットの送信はICMPエコー要求送信の場合リンク
+		 * レイヤーで行われる */
 		ret=IpSendLink(soc,Param.vmac,dmac,saddr,daddr,proto,dontFlagment,ttl,data,len);
 	}
 	else{

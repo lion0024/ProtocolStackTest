@@ -156,6 +156,7 @@ int PingSend(int soc,struct in_addr *daddr,int size)
 {
 int	i;
 
+	/* ping送信=Icmpエコー要求送信 */
 	for(i=0;i<PING_SEND_NO;i++){
 		IcmpSendEcho(soc,daddr,i+1,size);
 		sleep(1);

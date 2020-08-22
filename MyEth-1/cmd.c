@@ -147,6 +147,7 @@ char	*ptr,*saveptr;
 		return(0);
 	}
 	else if(strcmp(ptr,"ifconfig")==0){
+		/* MACアドレスは設定ファイルから書き換わることもある */
 		DoCmdIfconfig(&saveptr);
 		return(0);
 	}
