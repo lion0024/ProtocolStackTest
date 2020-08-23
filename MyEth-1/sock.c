@@ -104,6 +104,7 @@ struct ifreq	ifreq;
 int	soc;
 u_int8_t	*p;
 
+	/* こことshow_ifreq()でsocketは使われている */
 	if((soc=socket(AF_INET,SOCK_DGRAM,0))<0){
 		perror("GetMacAddress():socket");
 		return(-1);
@@ -129,6 +130,7 @@ int DummyWait(int ms)
 struct timespec	ts;
 
 	ts.tv_sec=0;
+	/* 1秒待つ */
 	ts.tv_nsec=ms*1000*1000;
 
 	nanosleep(&ts,NULL);

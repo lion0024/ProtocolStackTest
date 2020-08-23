@@ -226,12 +226,14 @@ int ArpSearchTable(struct in_addr *ipaddr,u_int8_t mac[6])
 {
 int	i;
 
+	/* 確認中に受信スレッドにより書き換えられることを防ぐ */
 	pthread_rwlock_rdlock(&ArpTableLock);
 
 	for(i=0;i<ARP_TABLE_NO;i++){
 		if(memcmp(ArpTable[i].mac,AllZeroMac,6)==0){
 		}
 		else{
+			/* 空でないなら一致するものがあるか確認する */
 			if(ArpTable[i].ipaddr.s_addr==ipaddr->s_addr){
 				memcpy(mac,ArpTable[i].mac,6);
 				pthread_rwlock_unlock(&ArpTableLock);
@@ -296,6 +298,7 @@ struct in_addr	addr;
 		}
 		DummyWait(DUMMY_WAIT_MS*(count+1));
 		count++;
+		/* ARP要求でMACアドレスを探すのをRETRY_COUNT回数行う */
 		if(count>RETRY_COUNT){
 			return(0);
 		}
@@ -348,6 +351,7 @@ union	{
 
 	saddr.l=0;
 	daddr.l=targetIp->s_addr;
+	/* ARP要求をブロードキャストアドレスに送信する */
 	ArpSend(soc,ARPOP_REQUEST,Param.vmac,BcastMac,Param.vmac,AllZeroMac,saddr.c,daddr.c);
 
 	return(0);
@@ -363,6 +367,7 @@ union	{
 
 	saddr.l=Param.vip.s_addr;
 	daddr.l=targetIp->s_addr;
+	/* ARP要求をブロードキャストアドレスに送信する */
 	ArpSend(soc,ARPOP_REQUEST,Param.vmac,BcastMac,Param.vmac,AllZeroMac,saddr.c,daddr.c);
 
 	return(0);
@@ -374,6 +379,7 @@ int ArpCheckGArp(int soc)
 u_int8_t	dmac[6];
 char	buf1[80],buf2[80];
 
+	/* GARPでのIPチェックなので第四引数は1 */
 	if(GetTargetMac(soc,&Param.vip,dmac,1)){
 		printf("ArpCheckGArp:%s use %s\n",inet_ntop(AF_INET,&Param.vip,buf1,sizeof(buf1)),my_ether_ntoa_r(dmac,buf2));
 		return(0);

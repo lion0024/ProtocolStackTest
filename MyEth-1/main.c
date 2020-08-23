@@ -104,7 +104,8 @@ void sig_term(int sig) /* 終了シグナルハンドラ */
 	EndFlag=1;
 }
 
-/* 終了処理 */
+/* 終了処理
+ * リソースの解放などを行う */
 int ending()
 {
 struct ifreq	if_req;
@@ -113,6 +114,7 @@ struct ifreq	if_req;
 
 	if(DeviceSoc!=-1){
 		strcpy(if_req.ifr_name,Param.device);
+		/* SIOCGIFFLAGSはソケット構成制御でflagを取得する */
 		if(ioctl(DeviceSoc,SIOCGIFFLAGS,&if_req)<0){
 			perror("ioctl");
 		}
@@ -137,6 +139,7 @@ int	soc;
 struct ifreq	ifreq;
 struct sockaddr_in	addr;
 
+	/* ここでソケットプログラムされている */
 	if((soc=socket(AF_INET,SOCK_DGRAM,0))==-1){
 		perror("socket");
 		return(-1);
@@ -246,10 +249,11 @@ pthread_t	thread_id;
 	pthread_attr_init(&attr);
 	pthread_attr_setstacksize(&attr,102400);
 	pthread_attr_setdetachstate(&attr,PTHREAD_CREATE_DETACHED);
-	/* 送受信スレッド */
+	/* 受信スレッドの作成 */
 	if(pthread_create(&thread_id,&attr,MyEthThread,NULL)!=0){
 		printf("pthread_create:error\n");
 	}
+	/* 送信スレッドの作成 */
 	if(pthread_create(&thread_id,&attr,StdInThread,NULL)!=0){
 		printf("pthread_create:error\n");
 	}
@@ -259,6 +263,9 @@ pthread_t	thread_id;
 		return(-1);
 	}
 
+	/* main関数って起動後処理した後はEndFlagが1になるまで
+	 * sleepを挟みながら、ループしているのか
+	 * 無駄なリソースな気もする */
 	while(EndFlag==0){
 		sleep(1);
 	}
