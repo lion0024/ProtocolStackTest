@@ -265,6 +265,7 @@ pthread_t	thread_id;
 
 	while(EndFlag==0){
 		sleep(1);
+		/* DHCPのリース延長のために定期的に実行される */
 		if(Param.DhcpStartTime!=0){
 			DhcpCheck(DeviceSoc);
 		}

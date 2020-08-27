@@ -51,6 +51,7 @@ int print_udp(struct udphdr *udp)
 	return(0);
 }
 
+/* UDPチェックサム計算 */
 u_int16_t UdpChecksum(struct in_addr *saddr,struct in_addr *daddr,u_int8_t proto,u_int8_t *data,int len)
 {
 struct pseudo_ip	p_ip;
@@ -69,6 +70,7 @@ u_int16_t	sum;
 	return(sum);
 }
 
+/* UDPテーブルに追加 */
 int UdpAddTable(u_int16_t port)
 {
 int	i,freeNo;
@@ -100,6 +102,7 @@ int	i,freeNo;
 	return(freeNo);
 }
 
+/* UDPテーブルから指定したポートを探す */
 int UdpSearchTable(u_int16_t port)
 {
 int	i;
@@ -135,6 +138,7 @@ int	i;
 	return(0);
 }
 
+/* 空きポートの検索 */
 u_int16_t UdpSearchFreePort()
 {
 u_int16_t	i;
@@ -148,6 +152,7 @@ u_int16_t	i;
 	return(0);
 }
 
+/* 受信ポートを準備する */
 int UdpSocket(u_int16_t port)
 {
 int	no;
@@ -169,6 +174,7 @@ int	no;
 	return(no);
 }
 
+/* 受信ポートをクローズする */
 int UdpSocketClose(u_int16_t port)
 {
 int	no;
@@ -185,6 +191,7 @@ int	no;
 	return(0);
 }
 
+/* UDPパケットを送受信MACアドレス指定できる送信関数 */
 int UdpSendLink(int soc,u_int8_t smac[6],u_int8_t dmac[6],struct in_addr *saddr,struct in_addr *daddr,u_int16_t sport,u_int16_t dport,int dontFlagment,u_int8_t *data,int len)
 {
 u_int8_t	*ptr,sbuf[64*1024];
@@ -212,6 +219,7 @@ printf("]\n");
 	return(0);
 }
 
+/* UDPパケットの送信 */
 int UdpSend(int soc,struct in_addr *saddr,struct in_addr *daddr,u_int16_t sport,u_int16_t dport,int dontFlagment,u_int8_t *data,int len)
 {
 u_int8_t	*ptr,sbuf[64*1024];
@@ -239,6 +247,7 @@ printf("]\n");
 	return(0);
 }
 
+/* UDPの受信処理 */
 int UdpRecv(int soc,struct ether_header *eh,struct ip *ip,u_int8_t *data,int len)
 {
 struct udphdr   *udp;

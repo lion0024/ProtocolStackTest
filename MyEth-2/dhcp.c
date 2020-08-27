@@ -919,6 +919,7 @@ int	end,n;
 	return(0);
 }
 
+/* DHCPリクエストデータの作成 */
 int MakeDhcpRequest(struct dhcp_packet *pa,u_int8_t mtype,struct in_addr *ciaddr,struct in_addr *req_ip,struct in_addr *server)
 {
 u_int8_t	*ptr;
@@ -1014,6 +1015,7 @@ printf("}\n");
 	return(0);
 }
 
+/* DHCPREQUESTユニキャスト送信 */
 int DhcpSendRequestUni(int soc)
 {
 int	size;
@@ -1102,8 +1104,10 @@ printf("DHCP lease time=%d\n",Param.DhcpLeaseTime);
 	return(0);
 }
 
+/* DHCPチェック処理 */
 int DhcpCheck(int soc)
 {
+	/* DHCPを始めた時間がリースタイムの半分以上になった場合 */
 	if(time(NULL)-Param.DhcpStartTime>=Param.DhcpLeaseTime/2){
 		Param.DhcpStartTime+=Param.DhcpLeaseTime/2;
 		Param.DhcpLeaseTime/=2;
